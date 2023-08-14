@@ -27,10 +27,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LBRC, KC_Q   , KC_W        , KC_E   , KC_R          , KC_T          ,                                 KC_Y          , KC_U   , KC_I   , KC_O   , KC_P   , KC_RBRC,
     KC_GRV , KC_A   , KC_S        , KC_D   , KC_F          , KC_G          ,                                 KC_H          , KC_J   , KC_K   , KC_L   , KC_SCLN, KC_QUOT,
     KC_EQL , KC_Z   , KC_X        , KC_C   , KC_V          , KC_B          , KC_ESC       ,    KC_BSPC     , KC_N          , KC_M   , KC_COMM, KC_DOT , KC_SLSH, KC_MINS,
-    KC_LCTL, KC_LSFT, KC_MENU     , KC_LWIN, LALT_T(KC_ENT), LSFT_T(KC_SPC), LT(3,KC_BSLS),    LT(1,KC_TAB), RCTL_T(KC_ENT), _______, _______, _______, KC_BTN1, TT(3)
+    KC_LCTL, KC_LSFT, KC_MENU     , KC_LWIN, LALT_T(KC_ENT), LSFT_T(KC_SPC), LT(3,KC_BSLS),    LT(2,KC_TAB), RCTL_T(KC_ENT), _______, _______, _______, KC_BTN1, TT(3)
   ),
 
   [1] = LAYOUT_universal(
+    KC_ESC , KC_1   , KC_2   , KC_3   , KC_4   , KC_5   ,                              KC_6   , KC_7   , KC_8   , KC_9   , KC_0   , KC_HOME,
+    _______, _______, _______, _______, _______, _______,                              _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______,                              _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______, _______,            _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______, _______,            _______, _______, _______, _______, _______, _______, _______
+  ),
+
+  [2] = LAYOUT_universal(
     _______, KC_F1     , KC_F2     , KC_F3        , KC_F4        , KC_F5        ,                               KC_F6     , KC_F7     , KC_F8     , KC_F9     , KC_F10    , KC_F11 ,
     _______, LSFT(KC_1), LSFT(KC_2), LSFT(KC_3)   , LSFT(KC_4)   , LSFT(KC_5)   ,                               LSFT(KC_6), LSFT(KC_7), LSFT(KC_8), LSFT(KC_9), LSFT(KC_0), KC_F12 ,
     _______, KC_1      , KC_2      , KC_3         , KC_4         , KC_5         ,                               KC_6      , KC_7      , KC_8      , KC_9      , KC_0      , _______,
@@ -38,16 +46,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______   , _______   , _______      , _______      , _______      , _______,             _______, _______   , _______   , _______   , _______   , _______   , _______
   ),
 
-  [2] = LAYOUT_universal(
-    KC_ESC  ,KC_1   , KC_2   , KC_3   , KC_4   , KC_5   ,                              KC_6    , KC_7   , KC_8   , KC_9   , KC_0   , KC_HOME,
-    KC_LBRC, KC_Q   , KC_W   , KC_E   , KC_R   , KC_T   ,                              KC_Y    , KC_U   , KC_I   , KC_O   , KC_P   , KC_RBRC,
-    KC_GRV , KC_A   , KC_S   , KC_D   , KC_F   , KC_G   ,                              KC_H    , KC_J   , KC_K   , KC_L   , KC_SCLN, KC_QUOT,
-    KC_EQL , KC_Z   , KC_X   , KC_C   , KC_V   , KC_B   , KC_ESC ,            KC_BSPC, KC_N    , KC_M   , KC_COMM, KC_DOT , KC_SLSH, KC_MINS,
-    _______, _______, _______, _______, _______, _______, _______,            _______, _______ , _______, _______, _______, _______, _______
-  ),
-
   [3] = LAYOUT_universal(
-    CPI_D100, CPI_I100  , DF(2)     , KC_BTN1   , KC_BTN2   , KC_BTN3   ,                              _______   , _______   , _______   , _______   , _______   , _______,
+    CPI_D100, CPI_I100  , DF(1)     , KC_BTN1   , KC_BTN2   , KC_BTN3   ,                              _______   , _______   , _______   , _______   , _______   , _______,
     SCRL_DVI, LWIN(KC_1), LWIN(KC_2), LWIN(KC_3), LWIN(KC_4), LWIN(KC_5),                              LWIN(KC_6), LWIN(KC_7), LWIN(KC_8), LWIN(KC_9), LWIN(KC_0), _______,
     SCRL_DVD, _______   , _______   , _______   , _______   , _______   ,                              KC_LEFT   , KC_DOWN   , KC_UP     , KC_RGHT   , _______   , _______,
     _______ , _______   , _______   , _______   , _______   , _______   , DF(0)  ,            KC_DEL , KC_HOME   , KC_PGDN   , KC_PGUP   , KC_END    , KC_BTN3   , _______,
