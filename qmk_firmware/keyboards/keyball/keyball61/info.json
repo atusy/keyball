@@ -6,6 +6,9 @@
     },
     "manufacturer": "Yowkees",
     "keyboard_name": "Keyball61",
+    "tapping": {
+      "term": 110
+    },
     "rgblight": {
         "driver": "ws2812"
     },
