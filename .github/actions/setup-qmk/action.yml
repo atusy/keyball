@@ -32,3 +32,7 @@ runs:
   - name: Setup QMK
     shell: bash
     run: qmk setup --home ${{ inputs.path }} --yes
+
+  - name: Install avr-gcc
+    shell: bash
+    run: sudo apt-get install -y gcc-avr binutils-avr avr-libc
