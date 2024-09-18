@@ -18,8 +18,8 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#define TAPPING_TERM 110
-#define KEYBALL_CPI_DEFAULT 1300
+#define TAPPING_TERM 110 // atusy
+#define KEYBALL_CPI_DEFAULT 1300 // atusy
 
 #pragma once
 
