@@ -65,6 +65,17 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return state;
 }
 
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case RCTL_T(KC_ENT):
+            return true;
+        case LSFT_T(KC_SPC):
+            return true;
+        default:
+            return false;
+    }
+}
+
 #ifdef OLED_ENABLE
 
 #    include "lib/oledkit/oledkit.h"

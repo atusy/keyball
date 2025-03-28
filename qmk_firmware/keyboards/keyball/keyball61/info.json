@@ -7,8 +7,9 @@
     "manufacturer": "Yowkees",
     "keyboard_name": "Keyball61",
     "tapping": {
-      "term": 110,
-      "hold_on_other_key_press": true
+      "term": 160,
+      "permissive_hold": true,
+      "hold_on_other_key_press_per_key": true,
     },
     "rgblight": {
         "driver": "ws2812"
