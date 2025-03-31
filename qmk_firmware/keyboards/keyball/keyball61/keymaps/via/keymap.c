@@ -23,14 +23,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_universal(
-    _______, KC_PSCR     , LT(3,KC_TAB), KC_BTN1     , KC_BTN2       , KC_BTN3       ,                                 _______       , _______     , _______     , _______     , _______        , _______,
-    KC_LBRC, KC_Q        , KC_W        , KC_E        , KC_R          , KC_T          ,                                 KC_Y          , KC_U        , KC_I        , KC_O        , KC_P           , KC_RBRC,
-    // GASC
-    // KC_GRV , LGUI_T(KC_A), LALT_T(KC_S), LSFT_T(KC_D), LCTL_T(KC_F)  , KC_G          ,                                 KC_H          , RCTL_T(KC_J), RSFT_T(KC_K), RALT_T(KC_L), RGUI_T(KC_QUOT),
-    // ASGC: A is on a, S is on s, I do not use GUI-D, CTRL is frequently used
-    KC_GRV , LALT_T(KC_A), LSFT_T(KC_S), LGUI_T(KC_D), LCTL_T(KC_F)  , KC_G          ,                                 KC_H          , RCTL_T(KC_J), RGUI_T(KC_K), RSFT_T(KC_L), RALT_T(KC_SCLN), KC_QUOT,
-    KC_EQL , KC_Z        , KC_X        , KC_C        , KC_V          , KC_B          , KC_ESC       ,    KC_BSPC     , KC_N          , KC_M        , KC_COMM     , KC_DOT      , KC_SLSH        , KC_MINS,
-    KC_LCTL, KC_LSFT     , KC_MENU     , KC_LALT     , LGUI_T(KC_ENT), LSFT_T(KC_SPC), LT(3,KC_BSLS),    LT(2,KC_TAB), RCTL_T(KC_ENT), _______     , _______     , _______     , KC_BTN1        , TT(3)
+    _______, KC_PSCR     , LT(3,KC_TAB), KC_BTN1     , KC_BTN2     , KC_BTN3       ,                                 _______, _______     , _______     , _______     , _______        , _______,
+    KC_LBRC, KC_Q        , KC_W        , KC_E        , KC_R        , KC_T          ,                                 KC_Y   , KC_U        , KC_I        , KC_O        , KC_P           , KC_RBRC,
+                                                                                                                                                     // RAlt on term on macOS is for special char inputs
+    KC_GRV , LSFT_T(KC_A), LALT_T(KC_S), LGUI_T(KC_D), LCTL_T(KC_F), KC_G          ,                                 KC_H   , RCTL_T(KC_J), RGUI_T(KC_K), LALT_T(KC_L), RSFT_T(KC_SCLN), KC_QUOT,
+    KC_EQL , KC_Z        , KC_X        , KC_C        , KC_V        , KC_B          , KC_ESC       ,    KC_BSPC     , KC_N   , KC_M        , KC_COMM     , KC_DOT      , KC_SLSH        , KC_MINS,
+    _______, _______     , _______     , _______     , _______     , LSFT_T(KC_SPC), LT(3,KC_BSLS),    LT(2,KC_TAB), KC_ENT , _______     , _______     , _______     , KC_BTN1        , TT(3)
   ),
 
   [1] = LAYOUT_universal(
