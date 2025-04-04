@@ -7,7 +7,7 @@
     "manufacturer": "Yowkees",
     "keyboard_name": "Keyball61",
     "tapping": {
-      "term": 130,
+      "term": 120,
       "permissive_hold": true,
       "hold_on_other_key_press_per_key": true,
     },
