@@ -23,12 +23,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_universal(
-    _______, KC_PSCR     , LT(3,KC_TAB), KC_BTN1     , KC_BTN2     , KC_BTN3       ,                                 _______, _______     , _______     , _______     , _______        , _______,
-    KC_LBRC, KC_Q        , KC_W        , KC_E        , KC_R        , KC_T          ,                                 KC_Y   , KC_U        , KC_I        , KC_O        , KC_P           , KC_RBRC,
-                                                                                                                                                     // RAlt on term on macOS is for special char inputs
-    KC_GRV , LSFT_T(KC_A), LALT_T(KC_S), LGUI_T(KC_D), LCTL_T(KC_F), KC_G          ,                                 KC_H   , RCTL_T(KC_J), RGUI_T(KC_K), LALT_T(KC_L), RSFT_T(KC_SCLN), KC_QUOT,
-    KC_EQL , KC_Z        , KC_X        , KC_C        , KC_V        , KC_B          , KC_ESC       ,    KC_BSPC     , KC_N   , KC_M        , KC_COMM     , KC_DOT      , KC_SLSH        , KC_MINS,
-    _______, _______     , _______     , _______     , _______     , LSFT_T(KC_SPC), LT(3,KC_BSLS),    LT(2,KC_TAB), KC_ENT , _______     , _______     , _______     , KC_BTN1        , TT(3)
+    _______, KC_PSCR, LT(3,KC_TAB), KC_BTN1, KC_BTN2       , KC_BTN3       ,                                 _______       , _______, _______, _______, _______, _______,
+    KC_LBRC, KC_Q   , KC_W        , KC_E   , KC_R          , KC_T          ,                                 KC_Y          , KC_U   , KC_I   , KC_O   , KC_P   , KC_RBRC,
+    KC_GRV , KC_A   , KC_S        , KC_D   , KC_F          , KC_G          ,                                 KC_H          , KC_J   , KC_K   , KC_L   , KC_SCLN, KC_QUOT,
+    KC_EQL , KC_Z   , KC_X        , KC_C   , KC_V          , KC_B          , KC_ESC       ,    KC_BSPC     , KC_N          , KC_M   , KC_COMM, KC_DOT , KC_SLSH, KC_MINS,
+    KC_LCTL, KC_LSFT, KC_MENU     , KC_LALT, LWIN_T(KC_ENT), LSFT_T(KC_SPC), LT(3,KC_BSLS),    LT(2,KC_TAB), RCTL_T(KC_ENT), _______, _______, _______, KC_BTN1, TT(3)
   ),
 
   [1] = LAYOUT_universal(
@@ -49,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [3] = LAYOUT_universal(
     CPI_D100, CPI_I100  , DF(1)     , KC_BTN1   , KC_BTN2   , KC_BTN3   ,                              _______   , _______   , _______   , _______   , _______   , _______,
-    SCRL_DVI, LGUI(KC_1), LGUI(KC_2), LGUI(KC_3), LGUI(KC_4), LGUI(KC_5),                              LGUI(KC_6), LGUI(KC_7), LGUI(KC_8), LGUI(KC_9), LGUI(KC_0), _______,
+    SCRL_DVI, LWIN(KC_1), LWIN(KC_2), LWIN(KC_3), LWIN(KC_4), LWIN(KC_5),                              LWIN(KC_6), LWIN(KC_7), LWIN(KC_8), LWIN(KC_9), LWIN(KC_0), _______,
     SCRL_DVD, _______   , _______   , _______   , _______   , _______   ,                              KC_LEFT   , KC_DOWN   , KC_UP     , KC_RGHT   , _______   , _______,
     _______ , _______   , _______   , _______   , _______   , _______   , DF(0)  ,            KC_DEL , KC_HOME   , KC_PGDN   , KC_PGUP   , KC_END    , KC_BTN3   , _______,
     _______ , _______   , _______   , _______   , _______   , _______   , _______,            _______, _______   , _______   , _______   , _______   , KC_BTN2   , _______
@@ -61,17 +60,6 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     // Auto enable scroll mode when the highest layer is 3
     keyball_set_scroll_mode(get_highest_layer(state) == 3);
     return state;
-}
-
-bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case RCTL_T(KC_ENT):
-            return true;
-        case LSFT_T(KC_SPC):
-            return true;
-        default:
-            return false;
-    }
 }
 
 #ifdef OLED_ENABLE
